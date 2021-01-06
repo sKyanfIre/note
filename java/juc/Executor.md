@@ -606,4 +606,4 @@
 
 * <a id=stream>流程图</a>
 
-  ![线程池工作流程](C:\Users\600900\Downloads\线程池工作流程.jpg)
+  ![线程池工作流程](https://gitee.com/zzz_123456/picgo/raw/main/image/线程池工作流程.jpg)
