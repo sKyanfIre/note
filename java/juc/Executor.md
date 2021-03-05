@@ -205,7 +205,7 @@
 
 * <a id="state">状态机</a>
 
-  ![image-20210105103000838](https://gitee.com/zzz_123456/picgo/raw/main/image/image-20210105103000838.png)
+  ![image-20210305105205665](https://gitee.com/zzz_123456/picgo/raw/main/image/image-20210305105205665.png)
 
   * RUNNING 运行状态，接受task，执行排队中task
   * SHUTDOWN 不接受新task，执行排队中task
@@ -607,3 +607,4 @@
 * <a id=stream>流程图</a>
 
   ![线程池工作流程](https://gitee.com/zzz_123456/picgo/raw/main/image/线程池工作流程.jpg)
+
