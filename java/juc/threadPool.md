@@ -10,7 +10,7 @@
 
 * [核心变量分析](#param)
 
-* 源码分析
+* [源码分析](#source)
 
 * 如何优雅使用
 
@@ -19,6 +19,8 @@
 * 扩展点
 
 * 感想
+
+* [问题](#questions)
 
   
 
@@ -92,3 +94,13 @@
 * corePoolSize
 * maximumPoolSize
 
+> <a id=source> 源码分析</a>
+* execute(Runnable command)
+* addWorker(Runable firstTask, boolean core)
+* runWorker(Worker w)
+> <a id=questions > 问题</a>
+
+* ctl的作用
+* 为什么Worker要实现AQS而不使用显示锁
+* BlockQueue中add/remove offer/poll put/take 区别
+* 线程池生命周期
