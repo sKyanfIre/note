@@ -1,4 +1,4 @@
-### 线程池浅析
+# 线程池浅析
 
 * [线程池创建及使用](#create)
 
@@ -18,15 +18,10 @@
 
 * 扩展点
 
-* 感想
-
 * [问题](#questions)
 
-  
-
-> <a id=create>线程池创建及使用</a>
-
-> <a id=compent>核心组件分析</a>
+> ## <a id=create>线程池创建及使用</a>
+> ## <a id=compent> 核心组件分析</a>
 
 * `ThreadFactory`
 
@@ -54,8 +49,6 @@
             }
     ```
 
-    
-
   * AbortPolicy
 
     ```java
@@ -65,8 +58,6 @@
                                                      e.toString());
             }
     ```
-
-    
 
   * CallerRunsPolicy
 
@@ -80,9 +71,7 @@
 
 * `RunnableFuture`
 
-  ​	
-
-> <a id=param>核心变量分析</a>
+> ## <a id=param>核心变量分析</a>
 
 * ctl 包含runState、workCount
 
@@ -91,16 +80,27 @@
 * workers
 * termination
 * keepAliveTime
+* allowCoreThreadTimeOut
 * corePoolSize
 * maximumPoolSize
 
-> <a id=source> 源码分析</a>
+>## <a id=source> 源码分析</a>
+
 * execute(Runnable command)
 * addWorker(Runable firstTask, boolean core)
 * runWorker(Worker w)
-> <a id=questions > 问题</a>
+* getTask()
+* processWorkerExit(Worker w, boolean completeAbruptly)
+* shutdown()
+* shutdownNow()
+* interruptIdleWorkers(boolean onlyOne)
+* interruptWorkers()
+* tryTerminate()
+
+>##  <a id=questions>问题</a>
 
 * ctl的作用
 * 为什么Worker要实现AQS而不使用显示锁
 * BlockQueue中add/remove offer/poll put/take 区别
 * 线程池生命周期
+* 线程池容量如何动态伸缩
